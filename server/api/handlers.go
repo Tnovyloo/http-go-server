@@ -5,12 +5,10 @@ import (
 	"net/http"
 )
 
-// ApiResponse defines the structure of the API response
 type ApiResponse struct {
 	Message string `json:"message"`
 }
 
-// Handler handles requests to the /api endpoint
 func HandleIndex(w http.ResponseWriter, r *http.Request) {
 	// Set the response content type to JSON
 	w.Header().Set("Content-Type", "application/json")

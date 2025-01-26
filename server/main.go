@@ -11,6 +11,7 @@ func main() {
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fs)
 
+	// Serve API
 	http.HandleFunc("/api", api.HandleIndex)
 
 	// Start the server on port 8080
