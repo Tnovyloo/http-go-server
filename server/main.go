@@ -1,8 +1,7 @@
-// File: main.go
-
 package main
 
 import (
+	"http-server/api"
 	"log"
 	"net/http"
 )
@@ -11,6 +10,8 @@ func main() {
 	// Serve static files from the "static" directory
 	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fs)
+
+	http.HandleFunc("/api", api.HandleIndex)
 
 	// Start the server on port 8080
 	port := ":8080"
