@@ -1,0 +1,4 @@
+{
+    "allowed_extensions": [".txt", ".pdf", ".jpg", ".html", ""],
+    "denied_extensions": [".exe", ".zip"]
+}
